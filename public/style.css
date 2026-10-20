@@ -1,0 +1,792 @@
+/* =========================================================
+   CAR QR WEBCALL - MOBILE FIRST CSS
+   Compatible with phones, tablets and desktop
+   ========================================================= */
+
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    min-height: 100%;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+
+body {
+    margin: 0;
+    width: 100%;
+    min-height: 100vh;
+
+    background: #f4f6f8;
+    color: #111827;
+
+    font-family:
+        Inter,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    font-size: 16px;
+    line-height: 1.5;
+
+    -webkit-font-smoothing: antialiased;
+}
+
+
+/* =========================================================
+   MAIN CONTAINER
+   ========================================================= */
+
+.shell {
+    width: 100%;
+    max-width: 620px;
+
+    margin: 0 auto;
+
+    padding:
+        28px
+        16px
+        40px;
+}
+
+
+/* =========================================================
+   BADGE
+   ========================================================= */
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+
+    min-height: 30px;
+
+    padding: 6px 11px;
+
+    background: #e8eef7;
+    color: #334155;
+
+    border-radius: 999px;
+
+    font-size: 11px;
+    font-weight: 800;
+
+    letter-spacing: .08em;
+}
+
+
+/* =========================================================
+   HEADINGS
+   ========================================================= */
+
+h1 {
+    margin: 16px 0 8px;
+
+    font-size: 32px;
+    line-height: 1.1;
+
+    font-weight: 800;
+
+    overflow-wrap: anywhere;
+}
+
+h2 {
+    margin: 8px 0 12px;
+
+    font-size: 21px;
+    line-height: 1.25;
+
+    font-weight: 800;
+}
+
+h3 {
+    margin: 0 0 10px;
+
+    font-size: 17px;
+}
+
+
+/* =========================================================
+   TEXT
+   ========================================================= */
+
+p {
+    margin: 0;
+}
+
+.muted {
+    color: #64748b;
+}
+
+.fine {
+    margin-top: 20px;
+
+    color: #64748b;
+
+    font-size: 13px;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   CARD
+   ========================================================= */
+
+.card {
+    width: 100%;
+
+    margin-top: 20px;
+
+    padding: 22px 18px;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 8px 25px
+        rgba(15, 23, 42, .06);
+}
+
+
+/* =========================================================
+   CAR ICON
+   ========================================================= */
+
+.car-icon {
+    display: block;
+
+    margin-bottom: 10px;
+
+    font-size: 52px;
+
+    line-height: 1;
+}
+
+
+/* =========================================================
+   STATUS
+   ========================================================= */
+
+.status {
+    margin-top: 12px;
+
+    color: #64748b;
+
+    text-align: center;
+
+    font-size: 15px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   PULSE
+   ========================================================= */
+
+.pulse {
+    width: 58px;
+    height: 58px;
+
+    margin:
+        4px
+        auto
+        18px;
+
+    border-radius: 50%;
+
+    background: #e0f2fe;
+
+    box-shadow:
+        0 0 0 10px #f0f9ff;
+
+    animation:
+        pulseAnimation 1.8s
+        ease-in-out
+        infinite;
+}
+
+@keyframes pulseAnimation {
+
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.08);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+.primary,
+.danger,
+.sound-btn {
+
+    width: 100%;
+
+    min-height: 50px;
+
+    margin-top: 12px;
+
+    padding:
+        13px
+        16px;
+
+    border: 0;
+
+    border-radius: 13px;
+
+    font-family: inherit;
+
+    font-size: 16px;
+
+    font-weight: 800;
+
+    line-height: 1.2;
+
+    cursor: pointer;
+
+    -webkit-tap-highlight-color:
+        transparent;
+
+    touch-action: manipulation;
+
+    transition:
+        transform .12s ease,
+        opacity .12s ease,
+        background .12s ease;
+}
+
+
+/* Main button */
+
+.primary {
+    background: #111827;
+    color: #ffffff;
+}
+
+
+/* Danger button */
+
+.danger {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+
+/* Sound button */
+
+.sound-btn {
+    margin-top: 0;
+
+    background: #111827;
+    color: #ffffff;
+}
+
+
+/* Sound enabled */
+
+.sound-enabled {
+    background: #047857 !important;
+}
+
+
+/* Disabled */
+
+.primary:disabled,
+.danger:disabled,
+.sound-btn:disabled {
+    opacity: .5;
+    cursor: not-allowed;
+}
+
+
+/* Touch feedback */
+
+.primary:active,
+.danger:active,
+.sound-btn:active {
+    transform: scale(.98);
+}
+
+
+/* =========================================================
+   LINKS
+   ========================================================= */
+
+.link {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-height: 42px;
+
+    padding:
+        9px
+        12px;
+
+    border:
+        1px solid
+        #d1d5db;
+
+    border-radius: 10px;
+
+    background: #ffffff;
+
+    color: #111827;
+
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    touch-action: manipulation;
+}
+
+
+/* =========================================================
+   FORMS
+   ========================================================= */
+
+label {
+    display: block;
+
+    margin-bottom: 15px;
+
+    color: #111827;
+
+    font-size: 14px;
+    font-weight: 700;
+}
+
+input,
+textarea,
+select {
+
+    display: block;
+
+    width: 100%;
+
+    min-height: 48px;
+
+    margin-top: 7px;
+
+    padding:
+        12px
+        13px;
+
+    border:
+        1px solid
+        #d1d5db;
+
+    border-radius: 11px;
+
+    background: #ffffff;
+
+    color: #111827;
+
+    font-family: inherit;
+
+    font-size: 16px;
+
+    outline: none;
+
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: #64748b;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(100, 116, 139, .12);
+}
+
+
+/* =========================================================
+   ROW / ADMIN
+   ========================================================= */
+
+.row {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 13px;
+
+    padding:
+        16px
+        0;
+
+    border-bottom:
+        1px solid
+        #eeeeee;
+}
+
+.row:last-child {
+    border-bottom: 0;
+}
+
+
+.actions {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 8px;
+
+    width: 100%;
+}
+
+
+/* =========================================================
+   INCOMING CALL
+   ========================================================= */
+
+.incoming-banner {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    width: 100%;
+
+    margin-bottom: 18px;
+
+    padding: 14px;
+
+    background: #ecfdf5;
+
+    border:
+        1px solid
+        #a7f3d0;
+
+    border-radius: 15px;
+
+    animation:
+        ringPulse
+        1.2s
+        ease-in-out
+        infinite;
+}
+
+.incoming-banner strong {
+    display: block;
+
+    font-size: 15px;
+}
+
+.incoming-banner span {
+    display: block;
+
+    margin-top: 2px;
+
+    color: #64748b;
+
+    font-size: 12px;
+}
+
+.ring-icon {
+
+    flex: 0 0 44px;
+
+    width: 44px;
+    height: 44px;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 50%;
+
+    background: #d1fae5;
+
+    font-size: 21px;
+}
+
+@keyframes ringPulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.015);
+    }
+}
+
+
+/* =========================================================
+   ACTIVE CALL TIMER
+   ========================================================= */
+
+#timer {
+
+    margin:
+        14px
+        0
+        18px;
+
+    text-align: center;
+
+    font-size: 42px;
+
+    font-weight: 900;
+
+    line-height: 1;
+
+    letter-spacing: 2px;
+
+    color: #111827;
+}
+
+
+/* =========================================================
+   HIDDEN
+   ========================================================= */
+
+.hidden {
+    display: none !important;
+}
+
+
+/* =========================================================
+   DIAGNOSTICS
+   ========================================================= */
+
+.diagnostics {
+
+    width: 100%;
+
+    margin-top: 18px;
+
+    padding: 14px;
+
+    background: #0f172a;
+
+    color: #e2e8f0;
+
+    border-radius: 14px;
+
+    text-align: left;
+
+    font-family:
+        ui-monospace,
+        SFMono-Regular,
+        Menlo,
+        Monaco,
+        Consolas,
+        monospace;
+
+    font-size: 11px;
+
+    line-height: 1.55;
+
+    overflow-x: auto;
+
+    overflow-y: auto;
+
+    max-height: 260px;
+
+    overflow-wrap: anywhere;
+}
+
+.diagnostics h3 {
+
+    margin: 0 0 8px;
+
+    color: #ffffff;
+
+    font-family: system-ui;
+
+    font-size: 14px;
+}
+
+.diag-ok {
+    color: #86efac;
+}
+
+.diag-warn {
+    color: #fde68a;
+}
+
+.diag-err {
+    color: #fca5a5;
+}
+
+
+/* =========================================================
+   OPERATOR SOUND BUTTON
+   ========================================================= */
+
+.sound-btn {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    margin-bottom: 18px;
+}
+
+
+/* =========================================================
+   DESKTOP
+   ========================================================= */
+
+@media (min-width: 600px) {
+
+    .shell {
+        padding:
+            45px
+            20px
+            60px;
+    }
+
+    h1 {
+        font-size: 38px;
+    }
+
+    .card {
+        padding: 28px;
+        margin-top: 24px;
+    }
+
+    .row {
+        flex-direction: row;
+
+        align-items: center;
+
+        justify-content: space-between;
+    }
+
+    .actions {
+        display: flex;
+
+        width: auto;
+
+        flex-wrap: wrap;
+    }
+
+    .primary,
+    .danger,
+    .sound-btn {
+        min-height: 52px;
+    }
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+   ========================================================= */
+
+@media (min-width: 900px) {
+
+    .shell {
+        max-width: 680px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 360px) {
+
+    .shell {
+        padding:
+            22px
+            12px
+            32px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 19px;
+    }
+
+    .card {
+        padding:
+            18px
+            14px;
+
+        border-radius: 17px;
+    }
+
+    .actions {
+        grid-template-columns: 1fr;
+    }
+
+    #timer {
+        font-size: 36px;
+    }
+
+}
+
+
+/* =========================================================
+   REDUCE ANIMATION FOR ACCESSIBILITY
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+
+        animation-duration:
+            .01ms !important;
+
+        animation-iteration-count:
+            1 !important;
+
+        scroll-behavior:
+            auto !important;
+
+        transition-duration:
+            .01ms !important;
+    }
+}

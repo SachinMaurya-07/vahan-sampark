@@ -1,0 +1,20 @@
+# Secrets and environment configuration
+.env
+.env.*
+!.env.example
+config.php
+/public/config.php
+/server/.env
+
+# Dependencies and runtime files
+node_modules/
+/server/node_modules/
+vendor/
+*.log
+.DS_Store
+Thumbs.db
+
+# Local/private data and generated artifacts
+data/
+uploads/
+cache/

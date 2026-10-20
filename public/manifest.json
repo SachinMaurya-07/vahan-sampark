@@ -1,0 +1,22 @@
+{
+    "name": "VAHAN SAMPARK",
+    "short_name": "VAHAN SAMPARK",
+    "description": "Anonymous vehicle contact and browser calling system",
+    "start_url": "owner_dashboard.php",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#ffd400",
+    "orientation": "portrait",
+    "icons": [
+        {
+            "src": "icon-192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
